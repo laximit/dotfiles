@@ -11,7 +11,6 @@ set linebreak
 set laststatus=2  
 set ruler         
 set number        
-set cursorline
 set noerrorbells  
 set confirm       
 set history=1000  
