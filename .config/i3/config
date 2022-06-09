@@ -1,0 +1,172 @@
+#     ██      ▄▄▄▄▄                       
+#     ▀▀     █▀▀▀▀██▄                     
+#   ████          ▄██ ██      ██ ████▄██▄ 
+#     ██       █████  ▀█  ██  █▀ ██ ██ ██ 
+#     ██          ▀██  ██▄██▄██  ██ ██ ██ 
+#  ▄▄▄██▄▄▄  █▄▄▄▄██▀  ▀██  ██▀  ██ ██ ██ 
+#  ▀▀▀▀▀▀▀▀   ▀▀▀▀▀     ▀▀  ▀▀   ▀▀ ▀▀ ▀▀ 
+#
+# Author: Murilo Lobos
+# Description: i3wm config file based on the Nord colorscheme.
+# Dependencies: dex, nm-applet, picom, nitrogen, lxqt-policykit,
+#								ranger, rofi, pcmanfm, xss-lock
+# Github: https://github.com/laximit/dotfiles/
+# License: https://github.com/laximit/dotfiles/blob/master/LICENSE
+
+
+
+#	Sets
+	## Set super as modifier key
+	set $mod Mod4
+	floating_modifier $mod
+
+	set $refresh_i3status killall -SIGUSR1 i3status
+
+	## Set colors
+	# class                 border  backgr. text    indicator 	
+	client.focused          #88C0D0 #2e3440 #ffffff #88c0d0 #88c0d0
+	client.focused_inactive #3b4252 #2e3440 #ffffff #3b4252 #3b4252
+	client.unfocused        #3b4252 #2e3440 #ffffff #3b4252 #3b4252
+	client.urgent           #bf616a #2e3440 #ffffff #bf616a #bf616a
+	client.placeholder      #88c0d0 #2e3440 #ffffff #88c0d0 #88c0d0
+
+	## Set borders to 2px
+	for_window [class=".*"] border pixel 2
+
+	## Set gaps
+	gaps inner 10
+	gaps outer 5
+	smart_gaps on
+
+	## Set workspace names
+	set $ws1 "1"
+	set $ws2 "2"
+	set $ws3 "3"
+	set $ws4 "4"
+	set $ws5 "5"
+	set $ws6 "6"
+	set $ws7 "7"
+	set $ws8 "8"
+	set $ws9 "9"
+	set $ws10 "10"
+
+# Execute
+	exec --no-startup-id dex --autostart --environment i3
+	exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+	exec --no-startup-id nm-applet
+	exec --no-startup-id picom --config /home/murilo/.config/picom/picom.conf
+	exec --no-startup-id nitrogen --restore
+	exec --no-startup-id setxkbmap br
+	exec --no-startup-id lxqt-policykit-agent
+
+# Bind Keys
+	## Super + d -> Rofi (drun)
+	bindsym $mod+d exec rofi -show drun
+
+	## Super + Return -> Open Terminal
+	bindsym $mod+Return exec i3-sensible-terminal
+
+	## Super + e -> Open Ranger
+	bindsym $mod+e exec xfce4-terminal -e ranger
+
+	## Super + Shift + e -> Open PCManFM
+	bindsym $mod+Shift+e exec pcmanfm
+
+	## Super + q -> Kill focused window 
+	bindsym $mod+q kill
+
+	## Super + Arrow Keys -> Move focus between windows
+	bindsym $mod+Left focus left
+	bindsym $mod+Down focus down
+	bindsym $mod+Up focus up
+	bindsym $mod+Right focus right
+
+	## Super + Shift + Arrow Keys -> Move focused window
+	bindsym $mod+Shift+Left move left
+	bindsym $mod+Shift+Down move down
+	bindsym $mod+Shift+Up move up
+	bindsym $mod+Shift+Right move right
+
+	## Super + h -> Use horizontal split
+	bindsym $mod+h split h
+
+	## Super + v -> Use vertical split
+	bindsym $mod+v split v
+
+	## Super + f -> Set window to fullscreen
+	bindsym $mod+f fullscreen toggle
+
+	## Super + Shift + Space -> Toggle focused window from floating/tiling
+	bindsym $mod+Shift+space floating toggle
+
+	## Control + Alt + RightArrow -> Go to next open workspace
+	bindsym Control+Mod1+Right workspace next
+
+	## Control + Alt + LeftArrow -> Go to previous open workspace
+	bindsym Control+Mod1+Left workspace prev
+
+	## Super + 1-0 -> Change to chosen workspace
+	bindsym $mod+1 workspace number $ws1
+	bindsym $mod+2 workspace number $ws2
+	bindsym $mod+3 workspace number $ws3
+	bindsym $mod+4 workspace number $ws4
+	bindsym $mod+5 workspace number $ws5
+	bindsym $mod+6 workspace number $ws6
+	bindsym $mod+7 workspace number $ws7
+	bindsym $mod+8 workspace number $ws8
+	bindsym $mod+9 workspace number $ws9
+	bindsym $mod+0 workspace number $ws10
+
+	## Super + Shift + 1-0 -> Move focused window to chosen workspace
+	bindsym $mod+Shift+1 move container to workspace number $ws1
+	bindsym $mod+Shift+2 move container to workspace number $ws2
+	bindsym $mod+Shift+3 move container to workspace number $ws3
+	bindsym $mod+Shift+4 move container to workspace number $ws4
+	bindsym $mod+Shift+5 move container to workspace number $ws5
+	bindsym $mod+Shift+6 move container to workspace number $ws6
+	bindsym $mod+Shift+7 move container to workspace number $ws7
+	bindsym $mod+Shift+8 move container to workspace number $ws8
+	bindsym $mod+Shift+9 move container to workspace number $ws9
+	bindsym $mod+Shift+0 move container to workspace number $ws10
+
+	## Super + Shift + r -> Restart i3wm
+	bindsym $mod+Shift+r restart
+
+	## Super + r -> Enter resize mode
+	bindsym $mod+r mode "resize"
+
+# Extras
+	## Resize Mode
+	mode "resize" {
+		## Arrowkeys -> resize focused window by 10px
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+		## Return / Esc / Super + r -> Exit resize mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+	}
+
+	## i3wm bar
+	bar {
+    status_command i3status
+		# mode auto
+		position top
+		font pango: JetBrainsMono NF 9
+		mode hide
+		hidden_state hide
+		modifier Mod4
+
+		colors {
+			background #2e3440
+			
+			focused_workspace		#5e81ac #5e81ac #ffffff
+			active_workspace		#3b4252 #3b4252 #ffffff
+			inactive_workspace	#3b4252 #3b4252 #ffffff
+			urgent_workspace		#bf616a #bf616a #ffffff
+			binding_mode				#ba8ead #b48ead #ffffff
+		}
+	}

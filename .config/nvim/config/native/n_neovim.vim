@@ -18,7 +18,6 @@ set noswapfile
 set hlsearch      
 set splitbelow	  
 set splitright	  
-
 set background=dark
 
 colorscheme nord
