@@ -19,6 +19,7 @@ set hlsearch
 set splitbelow	  
 set splitright	  
 set background=dark
+set termguicolors
 
 colorscheme nord
 
