@@ -2,7 +2,7 @@ set autoread
 set noshowmode    
 set mouse=a       
 set tabstop=2  
-set softtabstop=0 
+set softtabstop=2 
 set shiftwidth=2  
 set smarttab      
 set encoding=utf-8

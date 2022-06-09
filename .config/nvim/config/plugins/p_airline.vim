@@ -7,5 +7,5 @@ let g:airline#extensions#branch#empty_message = 'none'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_splits = 1
 let g:airline#extensions#tabline#show_tab_count = 1
-let g:airline_theme = 'onehalfdark'
+let g:airline_theme = 'base16_nord'
 let g:airline_symbols_ascii = 1

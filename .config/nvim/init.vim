@@ -13,7 +13,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'                                              
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                          
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } 
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-fugitive'
@@ -38,8 +38,9 @@ Plug 'camspiers/lens.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'feline-nvim/feline.nvim'
-Plug 'lewis6991/gitsigns.nvim'
+" Plug 'feline-nvim/feline.nvim'
+" Plug 'lewis6991/gitsigns.nvim'
+Plug 'prettier/vim-prettier', {'do': 'yarn install --frozen-lockfile --production'}
 call plug#end()
 
 source ~/.config/nvim/config/native/n_neovim.vim
@@ -56,5 +57,6 @@ source ~/.config/nvim/config/plugins/p_spaceduck.vim
 source ~/.config/nvim/config/plugins/p_telescope.vim
 source ~/.config/nvim/config/plugins/p_dashboard.vim
 source ~/.config/nvim/config/plugins/p_blamer.vim
-source ~/.config/nvim/config/plugins/p_feline.vim
-source ~/.config/nvim/config/plugins/p_gitsigns.vim
+" source ~/.config/nvim/config/plugins/p_feline.vim
+" source ~/.config/nvim/config/plugins/p_gitsigns.vim
+source ~/.config/nvim/config/plugins/p_prettier.vim
