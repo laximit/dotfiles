@@ -13,8 +13,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'                                              
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                          
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-telescope/telescope.nvim'
@@ -38,15 +39,14 @@ Plug 'camspiers/lens.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-" Plug 'feline-nvim/feline.nvim'
-" Plug 'lewis6991/gitsigns.nvim'
 Plug 'prettier/vim-prettier', {'do': 'yarn install --frozen-lockfile --production'}
 call plug#end()
 
 source ~/.config/nvim/config/native/n_neovim.vim
 source ~/.config/nvim/config/native/n_keybinds.vim
 
-source ~/.config/nvim/config/plugins/p_airline.vim
+" source ~/.config/nvim/config/plugins/p_airline.vim
+source ~/.config/nvim/config/plugins/p_lightline.vim
 source ~/.config/nvim/config/plugins/p_ale.vim
 source ~/.config/nvim/config/plugins/p_barbar.vim
 source ~/.config/nvim/config/plugins/p_coc.vim
@@ -57,6 +57,4 @@ source ~/.config/nvim/config/plugins/p_spaceduck.vim
 source ~/.config/nvim/config/plugins/p_telescope.vim
 source ~/.config/nvim/config/plugins/p_dashboard.vim
 source ~/.config/nvim/config/plugins/p_blamer.vim
-" source ~/.config/nvim/config/plugins/p_feline.vim
-" source ~/.config/nvim/config/plugins/p_gitsigns.vim
 source ~/.config/nvim/config/plugins/p_prettier.vim

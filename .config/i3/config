@@ -36,6 +36,7 @@
 	gaps inner 10
 	gaps outer 5
 	smart_gaps on
+	hide_edge_borders smart	
 
 	## Set workspace names
 	set $ws1 "1"
