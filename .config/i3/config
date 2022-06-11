@@ -36,8 +36,6 @@
 	## Set gaps
 		gaps inner 10
 		gaps outer 5
-		smart_gaps on
-		hide_edge_borders smart
 
 	## Set workspace names
 		set $ws1 "1"
@@ -59,6 +57,7 @@
 		exec --no-startup-id nitrogen --restore
 		exec --no-startup-id setxkbmap br
 		exec --no-startup-id lxqt-policykit-agent
+		exec --no-startup-id ./$HOME/.config/polybar/launch.sh
 
 # Bind Keys
 	## Super + d -> Rofi (drun)
@@ -152,20 +151,20 @@
 	}
 
 	## i3wm bar
-		bar {
-			status_command i3status
-			position top
-			font pango: JetBrainsMono NF 9
-			hidden_state hide
-			modifier Mod4
+		# bar {
+		# 	status_command i3status
+		# 	position top
+		# 	font pango: JetBrainsMono NF 9
+		# 	hidden_state hide
+		# 	modifier Mod4
 
-			colors {
-				background #2e3440
+		# 	colors {
+		# 		background #2e3440
 			
-				focused_workspace		#5e81ac #5e81ac #ffffff
-				active_workspace		#3b4252 #3b4252 #ffffff
-				inactive_workspace	#3b4252 #3b4252 #ffffff
-				urgent_workspace		#bf616a #bf616a #ffffff
-				binding_mode				#ba8ead #b48ead #ffffff
-			}
-		}
+		# 		focused_workspace		#5e81ac #5e81ac #ffffff
+		# 		active_workspace		#3b4252 #3b4252 #ffffff
+		# 		inactive_workspace	#3b4252 #3b4252 #ffffff
+		# 		urgent_workspace		#bf616a #bf616a #ffffff
+		# 		binding_mode				#ba8ead #b48ead #ffffff
+		# 	}
+		# }
