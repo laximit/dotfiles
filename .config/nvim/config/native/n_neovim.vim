@@ -19,6 +19,7 @@ set hlsearch
 set splitbelow	  
 set splitright	  
 set background=dark
+set guifont=JetBrainsMono\ NF:h9
 
 colorscheme nord
 

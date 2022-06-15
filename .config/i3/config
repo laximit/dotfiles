@@ -50,21 +50,23 @@
 		set $ws10 "10"
 
 # Execute
-		exec --no-startup-id dex --autostart --environment i3
-		exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-		exec --no-startup-id nm-applet
-		exec --no-startup-id picom --config /home/murilo/.config/picom/picom.conf
-		exec --no-startup-id nitrogen --restore
-		exec --no-startup-id setxkbmap br
-		exec --no-startup-id lxqt-policykit-agent
-		exec --no-startup-id ./$HOME/.config/polybar/launch.sh
+		exec_always --no-startup-id dex --autostart --environment i3
+		exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+		exec_always --no-startup-id nm-applet
+		exec_always --no-startup-id picom --config /home/murilo/.config/picom/picom.conf
+		exec_always --no-startup-id nitrogen --restore
+		exec_always --no-startup-id setxkbmap br
+		exec_always --no-startup-id lxqt-policykit-agent
+		exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+		exec_always --no-startup-id brightnessctl s 100%
+		exec_always --no-startup-id emacs --daemon
 
 # Bind Keys
 	## Super + d -> Rofi (drun)
 		bindsym $mod+d exec rofi -show drun -display-drun "▷" 
 
 	## Super + Return -> Open Terminal
-		bindsym $mod+Return exec i3-sensible-terminal
+		bindsym $mod+Return exec xfce4-terminal
 
 	## Super + e -> Open Ranger
 		bindsym $mod+e exec xfce4-terminal -e ranger
@@ -132,8 +134,32 @@
 	## Super + Shift + r -> Restart i3wm
 		bindsym $mod+Shift+r restart
 
+	## Control + Alt + Up -> Raise volume
+		bindsym Control+Mod1+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5% 
+
+	## Control + Alt + Down -> Lower volume
+		bindsym Control+Mod1+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5% 
+
+	## Control + Alt + m -> Mute volume
+		bindsym Control+Mod1+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle 
+	
+	## Control + Shift + Up -> Raise brightness
+		bindsym Control+Shift+Up exec brightnessctl s 10%+ 
+
+	## Control + Shift + Down -> Raise brightness
+		bindsym Control+Shift+Down exec brightnessctl s 10%- 
+
+	## Control + Shift + p -> Toggle polybar show (default to hide/show appmenu)
+		bindsym Control+Shift+p exec polybar-msg cmd toggle
+
 	## Super + r -> Enter resize mode
 		bindsym $mod+r mode "resize"
+
+	## Print -> Take area screenshot
+		bindsym Print exec xfce4-screenshooter -r -s "$HOME/Pictures/screenshots"
+
+	## Shift + Print -> Take entire screen screenshot
+		bindsym Shift+Print exec xfce4-screenshooter -f -s "$HOME/Pictures/screenshots"
 
 # Extras
 	## Resize Mode

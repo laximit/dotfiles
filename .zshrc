@@ -39,4 +39,5 @@
 	alias i3cf="$EDITOR $HOME/.config/i3/config"
 	alias roficf="cd $HOME/.config/rofi && $EDITOR"
 	alias picomcf="$EDITOR $HOME/.config/picom/picom.conf"
+	alias polycf="cd $HOME/.config/polybar/ && $EDITOR"
 	alias ls="logo-ls -Ash1DX"

@@ -13,8 +13,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'                                              
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                          
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } 
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/lightline.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-fugitive'
@@ -45,7 +43,6 @@ call plug#end()
 source ~/.config/nvim/config/native/n_neovim.vim
 source ~/.config/nvim/config/native/n_keybinds.vim
 
-" source ~/.config/nvim/config/plugins/p_airline.vim
 source ~/.config/nvim/config/plugins/p_lightline.vim
 source ~/.config/nvim/config/plugins/p_ale.vim
 source ~/.config/nvim/config/plugins/p_barbar.vim
