@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="None-711332" label="Social">
+		<item label="Firefox">
+			<action name="Execute">
+				<execute>firefox</execute>
+			</action>
+		</item>
+		<item label="Qutebrowser">
+			<action name="Execute">
+				<execute>qutebrowser</execute>
+			</action>
+		</item>
+		<item label="Discord">
+			<action name="Execute">
+				<execute>discord</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-291525" label="Terminals">
+		<item label="Alacritty">
+			<action name="Execute">
+				<execute>alacritty</execute>
+			</action>
+		</item>
+		<item label="Kitty">
+			<action name="Execute">
+				<execute>kitty</execute>
+			</action>
+		</item>
+		<item label="XFCE Terminal">
+			<action name="Execute">
+				<execute>xfce4-terminal</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-61524" label="Editors">
+		<item label="Vim">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e $HOME/.config/nvim/opennvim.sh vim</execute>
+			</action>
+		</item>
+		<item label="Neovim">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e $HOME/.config/nvim/opennvim.sh nvim</execute>
+			</action>
+		</item>
+		<item label="Neovide">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e $HOME/.config/nvim/opennvim.sh neovide</execute>
+			</action>
+		</item>
+		<item label="VSCode">
+			<action name="Execute">
+				<execute>code</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-721522" label="Recording">
+		<item label="OBS Studio">
+			<action name="Execute">
+				<execute>obs</execute>
+			</action>
+		</item>
+		<item label="Kdenlive">
+			<action name="Execute">
+				<execute>kdenlive</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-241521" label="File Managers">
+		<item label="Thunar">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<item label="PCManFM">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="Nautilus">
+			<action name="Execute">
+				<execute>command</execute>
+			</action>
+		</item>
+		<item label="Ranger">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e ranger</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-811521" label="Art">
+		<item label="Aseprite">
+			<action name="Execute">
+				<execute>aseprite</execute>
+			</action>
+		</item>
+		<item label="Blender">
+			<action name="Execute">
+				<execute>blender</execute>
+			</action>
+		</item>
+		<item label="Goxel">
+			<action name="Execute">
+				<execute>goxel</execute>
+			</action>
+		</item>
+		<item label="GIMP">
+			<action name="Execute">
+				<execute>gimp</execute>
+			</action>
+		</item>
+		<item label="Inkscape">
+			<action name="Execute">
+				<execute>inkscape</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-311520" label="Utilities">
+		<item label="Bluetooth Manager">
+			<action name="Execute">
+				<execute>blueman</execute>
+			</action>
+		</item>
+		<item label="Pulseaudio Control">
+			<action name="Execute">
+				<execute>pavucontrol</execute>
+			</action>
+		</item>
+		<item label="Anydesk">
+			<action name="Execute">
+				<execute>anydesk</execute>
+			</action>
+		</item>
+		<item label="Godot Engine">
+			<action name="Execute">
+				<execute>godot</execute>
+			</action>
+		</item>
+		<item label="GPick">
+			<action name="Execute">
+				<execute>gpick</execute>
+			</action>
+		</item>
+		<item label="NCDU">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e ncdu /</execute>
+			</action>
+		</item>
+		<item label="nmtui">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e nmtui</execute>
+			</action>
+		</item>
+		<item label="Nitrogen">
+			<action name="Execute">
+				<execute>nitrogen</execute>
+			</action>
+		</item>
+		<item label="QBitTorrent">
+			<action name="Execute">
+				<execute>qbittorrent</execute>
+			</action>
+		</item>
+		<item label="Rofi">
+			<action name="Execute">
+				<execute>rofi</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-961520" label="Games">
+		<item label="Desmume">
+			<action name="Execute">
+				<execute>desmume</execute>
+			</action>
+		</item>
+		<item label="Retroarch">
+			<action name="Execute">
+				<execute>retroarch</execute>
+			</action>
+		</item>
+		<item label="Steam">
+			<action name="Execute">
+				<execute>steam</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-691913" label="Configs">
+		<item label="ZSH Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e zshcf</execute>
+			</action>
+		</item>
+		<item label="Neovim Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e nvimcf</execute>
+			</action>
+		</item>
+		<item label="TMUX Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e tmuxcf</execute>
+			</action>
+		</item>
+		<item label="i3 Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e i3cf</execute>
+			</action>
+		</item>
+		<item label="Rofi Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e roficf</execute>
+			</action>
+		</item>
+		<item label="Picom Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e picomcf</execute>
+			</action>
+		</item>
+		<item label="Polybar Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e polycf</execute>
+			</action>
+		</item>
+		<item label="Openbox Config">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e obcf</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-211511" label="System">
+		<item label="ARandR">
+			<action name="Execute">
+				<execute>arandr</execute>
+			</action>
+		</item>
+		<item label="Bpytop">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e bpytop</execute>
+			</action>
+		</item>
+		<item label="GParted">
+			<action name="Execute">
+				<execute>gparted</execute>
+			</action>
+		</item>
+		<item label="Grub Customizer">
+			<action name="Execute">
+				<execute>grub-customizer</execute>
+			</action>
+		</item>
+		<item label="Htop">
+			<action name="Execute">
+				<execute>$DEFAULT_TERMINAL -e htop</execute>
+			</action>
+		</item>
+		<item label="LXAppearance">
+			<action name="Execute">
+				<execute>lxappearance</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="None-9318" label="Status">
+		<item label="Lock Screen">
+			<action name="Execute">
+				<execute>betterlockscreen -l</execute>
+			</action>
+		</item>
+		<item label="Log Out">
+			<action name="Execute">
+				<execute>openbox --exit</execute>
+			</action>
+		</item>
+		<item label="Reconfigure OB">
+			<action name="Execute">
+				<execute>openbox --reconfigure</execute>
+			</action>
+		</item>
+		<item label="Reboot">
+			<action name="Execute">
+				<execute>reboot</execute>
+			</action>
+		</item>
+		<item label="Shutdown">
+			<action name="Execute">
+				<execute>shutdown now</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="root-menu" label="Openbox">
+		<menu id="apps-social-menu" />
+		<menu id="apps-terminals-menu" />
+		<menu id="apps-editors-menu" />
+		<menu id="apps-recording-menu" />
+		<menu id="apps-fm-menu" />
+		<menu id="apps-art-menu" />
+		<menu id="apps-utilities-menu" />
+		<menu id="apps-games-menu" />
+		<separator />
+		<menu id="apps-configs-menu" />
+		<menu id="apps-system-menu" />
+		<menu id="apps-status-menu" />
+	</menu>
+</openbox_menu>

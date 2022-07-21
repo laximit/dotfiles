@@ -19,6 +19,7 @@
 	## Set super as modifier key
 		set $mod Mod4
 		floating_modifier $mod
+		set $default_terminal alacritty
 
 	## Restart i3status on i3 reset
 		set $refresh_i3status killall -SIGUSR1 i3status
@@ -50,8 +51,7 @@
 		set $ws10 "10"
 
 # Execute
-		exec_always --no-startup-id dex --autostart --environment i3
-		exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+		exec_always --no-startup-id $HOME/.screenlayout/current.sh
 		exec_always --no-startup-id nm-applet
 		exec_always --no-startup-id picom --config /home/murilo/.config/picom/picom.conf
 		exec_always --no-startup-id nitrogen --restore
@@ -59,20 +59,17 @@
 		exec_always --no-startup-id lxqt-policykit-agent
 		exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 		exec_always --no-startup-id brightnessctl s 100%
-		exec_always --no-startup-id emacs --daemon
+		exec_always --no-startup-id xmousepasteblock
 
 # Bind Keys
 	## Super + d -> Rofi (drun)
 		bindsym $mod+d exec rofi -show drun -display-drun "▷" 
 
 	## Super + Return -> Open Terminal
-		bindsym $mod+Return exec xfce4-terminal
+		bindsym $mod+Return exec $default_terminal
 
-	## Super + e -> Open Ranger
-		bindsym $mod+e exec xfce4-terminal -e ranger
-
-	## Super + Shift + e -> Open PCManFM
-		bindsym $mod+Shift+e exec pcmanfm
+	## Super + e -> Open PCManFM
+		bindsym $mod+e exec pcmanfm
 
 	## Super + q -> Kill focused window 
 		bindsym $mod+q kill
@@ -100,6 +97,9 @@
 
 	## Super + Shift + Space -> Toggle focused window from floating/tiling
 		bindsym $mod+Shift+space floating toggle
+
+	## Super + Shift + l -> Lock screen using betterlockscreen
+		bindsym $mod+Shift+l exec betterlockscreen -l
 
 	## Control + Alt + RightArrow -> Go to next open workspace
 		bindsym Control+Mod1+Right workspace next
@@ -160,6 +160,9 @@
 
 	## Shift + Print -> Take entire screen screenshot
 		bindsym Shift+Print exec xfce4-screenshooter -f -s "$HOME/Pictures/screenshots"
+
+	## Control + Shift + Escape -> Open Htop
+		bindsym Control+Shift+Escape exec $default_terminal -e htop
 
 # Extras
 	## Resize Mode

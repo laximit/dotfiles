@@ -1,0 +1,7 @@
+$HOME/.screenlayout/current.sh &
+nm-applet &
+nitrogen --restore &
+lxqt-policykit-agent &
+brightnessctl s 100% &
+$HOME/.config/picom/startpicom.sh &
+tint2 &

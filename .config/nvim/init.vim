@@ -30,7 +30,6 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
-Plug 'glepnir/dashboard-nvim'
 Plug 'APZelos/blamer.nvim'
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
@@ -52,6 +51,5 @@ source ~/.config/nvim/config/plugins/p_ranger.vim
 source ~/.config/nvim/config/plugins/p_rainbow.vim
 source ~/.config/nvim/config/plugins/p_spaceduck.vim
 source ~/.config/nvim/config/plugins/p_telescope.vim
-source ~/.config/nvim/config/plugins/p_dashboard.vim
 source ~/.config/nvim/config/plugins/p_blamer.vim
 source ~/.config/nvim/config/plugins/p_prettier.vim
