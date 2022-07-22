@@ -14,6 +14,7 @@
 # Exports
 	export ZSH="$HOME/.oh-my-zsh"
 	export EDITOR='nvim'
+	export DEFAULT_TERMINAL="alacritty"
 
 # Enable local bin folder
 	PATH=$HOME/bin:$PATH
@@ -38,6 +39,8 @@
 	alias tmuxcf="$EDITOR $HOME/.tmux.conf"
 	alias i3cf="$EDITOR $HOME/.config/i3/config"
 	alias roficf="cd $HOME/.config/rofi && $EDITOR"
-	alias picomcf="$EDITOR $HOME/.config/picom/picom.conf"
+	alias picomcf="cd $HOME/.config/picom/ && $EDITOR"
 	alias polycf="cd $HOME/.config/polybar/ && $EDITOR"
-	alias ls="logo-ls -Ash1DX"
+	alias obcf="cd $HOME/.config/openbox/ && $EDITOR"
+	alias ls="logo-ls -Ashi1DX"
+	alias relfont="fc-cache -f -v"
